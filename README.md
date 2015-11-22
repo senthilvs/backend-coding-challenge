@@ -21,7 +21,8 @@ The app is now addressing all the following mandatory tasks
 4. README is updated with appropriate changes.
 
 and also the extra credit task
-1. VAT is dynamically computed and shown to user as and when amount field is populated .
+
+1. VAT is dynamically computed and shown to the user as and when amount field is entered (before they save the expense to the database)
 
 Note to evaluator:
 ==================
