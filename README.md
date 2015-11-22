@@ -1,40 +1,36 @@
-Goal
-====
-Produce a simple web-app backend to complement the supplied front-end code.
+Submission Notes:
+=================
+This project for submission is built using Spring Boot on Java 8.
 
-Mandatory Work
---------------
-Fork this repository. Starting with the provided HTML, CSS, and JS, create a Java-based REST API that:
+Instructions for usage/testing: 
+===============================
+1)Ensure appropriate db details(MySQL) is updated in application.properties 
+2)Execute 'mvn package' 
+3)Execute 'java -jar target/vatapp-0.0.1-SNAPSHOT.jar'
 
-1. Saves expenses as entered to a database.
-2. Retrieves them for display on the page. 
-3. Add a new column to the table displaying the VAT amount for each expense.
-4. Alter the README to contain instructions on how to build and run your app.
+Note: Ensure 8080 port is free on machine where app is getting deployed. 
+Also,the app auto-creates the db table on mysql and drops them , when brought down .
 
-VAT is the UK’s sales tax. It is 20% of the value of the expense, and is included in the amount entered by the user.
+App URL :  http://localhost:8080/default.html
 
-Give our account `alchemytec` access to your fork, and send us an email when you’re done. Feel free to ask questions if anything is unclear, confusing, or just plain missing.
+The app is now addressing all the following mandatory tasks 
 
-Extra Credit
-------------
-Calculate the VAT client-side as the user enters a new expense, before they save the expense to the database.
+1.Saves expenses as entered to a database.
+2.Retrieves them for display on the page. 
+3.Add a new column to the table displaying the VAT amount for each expense.
+4.Alter the README to contain instructions on how to build and run your app.
 
-Questions
----------
-##### What frameworks can I use?
-That’s entirely up to you, as long as they’re OSS. We’ll ask you to explain the choices you’ve made. Please pick something you're familiar with, as you'll need to be able to discuss it.
+and also the extra credit task
+1.Calculate the VAT client-side as the user enters a new expense, before they save the expense to the database.
 
-##### What application servers can I use?
-Anyone you like, as long as it’s available OSS. You’ll have to justify your decision. We use dropwizard and Tomcat internally. Please pick something you're familiar with, as you'll need to be able to discuss it.
 
-##### What database should I use?
-MySQL or PostgreSQL. We use MySQL in-house.
+Note to evaluator:
+==================
+Being the contest, more focus has been given to address the functional requirements from backend perspective
+and ensured fair coverage on the other aspects of structure , test ,etc.
 
-##### What will you be grading me on?
-Elegance, robustness, understanding of the technologies you use, tests, security. 
+Also for UI , the shared client code is reused but placed @ src/webapp directory now.
+The UI code changed for submission are expenses-content.html and expenses-controller.js under webapp/src/js.
+Due to gulpfile build issues on local, packed the above changes directly in codingtest.min.js @ webapp/static/js.
 
-##### Will I have a chance to explain my choices?
-Feel free to comment your code, or put explanations in a pull request within the repo. If we proceed to a phone interview, we’ll be asking questions about why you made the choices you made. 
-
-##### Why doesn’t the test include X?
-Good question. Feel free to tell us how to make the test better. Or, you know, fork it and improve it!
+Kindly reach out via email , for more info or any issues in app usage.
